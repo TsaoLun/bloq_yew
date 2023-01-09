@@ -1,7 +1,7 @@
-use crate::{router::Route, app::HeadProps};
+use crate::{app::HeadProps, router::Route};
+use stylist::{style, yew::styled_component};
 use yew::prelude::*;
 use yew_router::prelude::*;
-use stylist::{style, yew::styled_component};
 
 #[function_component(Home)]
 pub fn home() -> Html {
@@ -16,18 +16,21 @@ pub fn home() -> Html {
                 color: white;
                 text-align: center;
             }
+            a {
+                color: green;
+                text-align: center;
+                display: block;
+            }
         "#
     )
     .unwrap();
     let home_context = use_context::<HeadProps>();
     html! {
-        <div>
+        <div class={stylesheet}>
             <h1>{"Home"}</h1>
-            <div class={stylesheet}>
             <h1>{"bloq"}</h1>
             <p>{home_context.unwrap_or_default().content}</p>
-                <Link<Route> to={Route::Blog}>{"To Blog"}</Link<Route>>
-            </div>
+            <Link<Route> to={Route::Blog}>{"To Blog"}</Link<Route>>
         </div>
     }
 }

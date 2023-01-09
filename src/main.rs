@@ -1,6 +1,6 @@
 mod app;
-mod router;
 mod components;
+mod router;
 use app::App;
 
 fn main() {

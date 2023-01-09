@@ -1,6 +1,6 @@
+use crate::components::pages::{blog::*, home::*};
 use yew::prelude::*;
 use yew_router::prelude::*;
-use crate::components::pages::{home::*, blog::*};
 
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
