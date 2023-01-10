@@ -1,5 +1,5 @@
 use crate::{app::HeadProps, router::Route};
-use stylist::{style, yew::styled_component};
+use stylist::style;
 use yew::prelude::*;
 use yew_router::prelude::*;
 
@@ -21,16 +21,27 @@ pub fn home() -> Html {
                 text-align: center;
                 display: block;
             }
+            ul {
+                jusify-content: center;
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+            }
+            li {
+                color: green;
+                margin: 0 auto;
+            }
         "#
     )
     .unwrap();
-    let home_context = use_context::<HeadProps>();
+    let home_context = use_context::<HeadProps>().unwrap_or_default();
     html! {
         <div class={stylesheet}>
-            <h1>{"Home"}</h1>
             <h1>{"bloq"}</h1>
-            <p>{home_context.unwrap_or_default().content}</p>
-            <Link<Route> to={Route::Blog}>{"To Blog"}</Link<Route>>
+            <p>{home_context.content}</p>
+            <ul>
+                {home_context.list.unwrap_or_default().iter().map(|id| html!{<li><Link<Route> to={Route::Blog}>{id}</Link<Route>></li>}).collect::<Html>()}
+            </ul>
         </div>
     }
 }
