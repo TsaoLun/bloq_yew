@@ -17,9 +17,10 @@ pub fn home() -> Html {
                 text-align: center;
             }
             a {
-                color: orange;
+                color: darkorange;
                 display: block;
                 font-size: 25px;
+                text-decoration: none;
             }
             ul {
                 padding: 0;
