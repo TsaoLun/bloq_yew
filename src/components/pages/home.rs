@@ -36,6 +36,7 @@ pub fn home() -> Html {
                 color: white;
                 margin: 0 auto;
                 height: 50px;
+                list-style-type: none;
             }
             footer {
                 padding-bottom: 4rem;
@@ -50,7 +51,7 @@ pub fn home() -> Html {
             }
             .title {
                 padding-top: 1.5rem;
-                width: 600px;
+                width: 650px;
             }
             .summary {
                 margin: auto;
