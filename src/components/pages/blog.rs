@@ -7,14 +7,20 @@ use yew_router::prelude::*;
 pub fn hello() -> Html {
     let stylesheet = style!(
         r#"
-            text-align: center;
             h1 {
-                color: orange;
+                color: white;
                 text-align: center;
-                font-size: 60px;
+                font-size: 40px;
             }
             button {
-                color: green;
+                color: white;
+                width: 4rem;
+                height: 4rem;
+                margin-top: 1rem;
+                margin-left: 1rem;
+                text-align: left;
+                background-color: darkorange;
+                border-width: 0px;
             }
         "#
     )
@@ -25,8 +31,8 @@ pub fn hello() -> Html {
     });
     html! {
         <div class={stylesheet}>
-            <h1>{"Blog"}</h1>
             <button onclick={onclick}>{"Go Home"}</button>
+            <h1>{"Blog"}</h1>
         </div>
     }
 }

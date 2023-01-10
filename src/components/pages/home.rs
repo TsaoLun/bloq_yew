@@ -22,15 +22,23 @@ pub fn home() -> Html {
                 font-size: 25px;
             }
             ul {
-                jusify-content: center;
-                display: flex;
-                flex-direction: column;
                 padding: 0;
+                border-top-width: 1px;
+                border-color: rgba(209,213,219,0.8);
+                border-top-style: solid;
+                width: 650px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 60px;
             }
             li {
                 color: white;
                 margin: 0 auto;
                 height: 50px;
+            }
+            footer {
+                padding-bottom: 4rem;
+                margin-top: 5rem;
             }
             .avatar {
                 width: 100px;
@@ -40,12 +48,15 @@ pub fn home() -> Html {
                 margin: auto;
             }
             .title {
-                padding-top: 2rem;
+                padding-top: 1.5rem;
+                width: 600px;
             }
             .summary {
                 margin: auto;
-                width: 900px;
+                width: 650px;
                 color: grey;
+                line-height: 1.5rem;
+                text-align: left;
             }
         "#
     )
@@ -72,6 +83,7 @@ pub fn home() -> Html {
             <ul>
                 {blog_list}
             </ul>
+            <footer></footer>
         </div>
     }
 }
