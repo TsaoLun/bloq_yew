@@ -41,6 +41,8 @@ pub fn home() -> Html {
             footer {
                 padding-bottom: 4rem;
                 margin-top: 5rem;
+                text-align: center;
+                font-size: 14px;
             }
             .avatar {
                 width: 100px;
@@ -85,7 +87,7 @@ pub fn home() -> Html {
             <ul>
                 {blog_list}
             </ul>
-            <footer></footer>
+            <footer><ul><li>{"Powered by Yew"}</li><li>{"粤ICP备2022118105号-1"}</li></ul></footer>
         </div>
     }
 }
