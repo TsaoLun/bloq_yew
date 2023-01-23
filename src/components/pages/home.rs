@@ -44,6 +44,10 @@ pub fn home() -> Html {
                 text-align: center;
                 font-size: 14px;
             }
+            footer li {
+                padding-top: 25px;
+                height: 10px;
+            }
             .avatar {
                 width: 100px;
                 height: 100px;
